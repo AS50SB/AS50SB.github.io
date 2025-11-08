@@ -1,39 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - Fuel Loader</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* 简单样式，可根据需求自定义 */
-        body {
-            font-family: Arial, sans-serif;
+        /* 关于页面特有样式 */
+        .about-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
-        h1 {
-            color: #333;
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
-        .download-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
         }
-        .download-btn:hover {
-            background-color: #0056b3;
+
+        .info-card h3 {
+            color: #feca57;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #feca57;
+            padding-bottom: 0.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-list li:before {
+            content: "✓ ";
+            color: #1dd1a1;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .version-history {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .version-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .version-number {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
     </style>
 </head>
 <body>
-    <h1>Github</h1>
-    <p>Github Release:https://github.com/AS50SB/Fuel-Loader/releases
-github:https://github.com/AS50SB/AS50SB.github.io
-email:3992924248@qq.com</p>
-    <!-- https://github.com/AS50SB/Fuel-Loader -->
-    <a href="https://github.com/AS50SB/Fuel-Loader" class="download-btn">Open the github.</a>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Fuel Loader</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="about-hero">
+            <h2>About Fuel Loader</h2>
+            <p>A too easy ppt tool!</p>
+        </section>
+
+        <section class="about-content">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Introduction</h3>
+                    <p>Fuel Loader is a good and easy ppt tool.</p>
+                    <p>Code by python,thanks for Doubao(python code) and Deepseek(html).</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Automatically detect files</li>
+                        <li>"JSON that does not require learning"</li>
+                        <li>Pure simplicity without difficulty</li>
+                        <li>Simple usage method</li>
+                        <li>A simple tool for multiple selection and copying</li>
+                        <li>Fully compatible with the mainstream PPTX format</li>
+                        <li>A log that even a five-year-old child can understand</li>
+                        <li>The difficulty level that even a three-year-old child can handle</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Technical Architecture</h3>
+                    <p>Built on a modern development framework, ensuring software stability and performance:</p>
+                    <ul class="feature-list">
+                        <li>Python tkinter.</li>
+                        <li>Install in 1s.</li>
+                        <li>No login required</li>
+                        <li>Completely free</li>
+                        <li>Completely open-sourced</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>System requirements</h3>
+                    <ul class="feature-list">
+                        <li>Windows</li>
+                        <li>50MB of available memory (1GB recommended)</li>
+                        <li>100MB of free disk space</li>
+                        <li>Complete dll file</li>
+                        <li>You are human</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version-history">
+                <h3 style="text-align: center; color: #feca57; margin-bottom: 2rem;">Change log</h3>
+                
+                <div class="version-item">
+                    <span class="version-number">v0.0.0.1</span> - <em>2021/1/1</em>
+                    <p>• Made out of boredom </p>
+                    <p>• It has no practical effect</p>
+                    <p>• Draw it out using a picture</p>
+                </div>
+
+                <div class="version-item">
+                    <span class="version-number">v0.0.1-build.1</span> - <em>2025/10/3</em>
+                    <p>• The code is written in Python</p>
+                    <p>• Add actual effects</p>
+                    <p>• Write code using AI</p>
+                </div>
+
+                <div class="version-item">
+                    <span class="version-number"></span> - <em>2025/10/4</em>
+                    <p>• Add a website based on GitHub</p>
+                </div>
+                <div class="version-item">
+                    <span class="version-number"></span> - <em>2025/11/6</em>
+                    <p>• Change website based on GitHub</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Development team</h3>
+                <p>team members</p>
+                <ul class="feature-list">
+                    <li>End And Blossom</li>
+                    <li>Doubao AI</li>
+                    <li>Deepseek AI</li>
+                    <li>su___su</li>
+                    <li>Dear users</li>
+                </ul>
+                
+                <div class="contact-links">
+                    <a href="mailto:3992924248@qq.com" class="contact-btn">email</a>
+                    <a href="https://github.com/A550SB/fuel-loader" class="contact-btn">Github</a>
+                    <a href="download.html" class="contact-btn">Download</a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Open source-</h3>
+                <p>Open source license: I don't understand any licenses!</p>
+                <ul class="feature-list">
+                    <li>Allow free use, copy, and modification</li>
+                    <li>Allow commercial use(?)</li>
+                    <li>No copyright required, just post the official website link</li>
+                    <li>No quality guarantee is provided</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; opacity: 0.8;">
+                    No LICENSE! 
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fuel Loader. All rights reserved. </p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
